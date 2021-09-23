@@ -1,8 +1,9 @@
-import org.apache.tools.ant.DirectoryScanner
+
 
 
 plugins {
     id 'java-library'
+    id 'application'
 }
 
 group 'edu.depaul'
@@ -29,12 +30,10 @@ dependencies {
 }
 
 //TODO: change to your userid
-def user = 'DWALKE30'
+def user = 'JREYES72'
 
 task packageDistribution(type: Zip) {
-    doFirst{
-        DirectoryScanner.removeDefaultExclude("**/.gitignore")
-    }
+
     dependsOn check
     archiveFileName = "${user}-${rootProject.name}.zip"
     destinationDirectory = file("$buildDir/dist")
@@ -45,7 +44,6 @@ task packageDistribution(type: Zip) {
         include "gradlew"
         include "gradlew.bat"
         include "settings.gradle"
-        include ".gitignore"
     }
 
     into("${rootProject.name}")
@@ -62,3 +60,10 @@ check {
     finalizedBy packageDistribution
 }
 
+ext {
+    javaMainClass = "main.Main"
+}
+
+application {
+    mainClassName = javaMainClass
+}

@@ -3,6 +3,7 @@ package controller.command;
 import controller.interfaces.Command;
 import controller.interfaces.Undoable;
 import model.interfaces.UserChoices;
+import model.picture.Picture;
 import model.picture.Point;
 import model.picture.Rectangle;
 
@@ -21,7 +22,9 @@ public class CreateShapeCommand implements Command, Undoable {
     @Override
     public void run() {
         Rectangle rect = new Rectangle(start,end,userChoices.getActivePrimaryColor());
-
+        CommandHistory.add(this);
+        Picture p = new Picture();
+        p.add(rect);
         System.out.println("running...");
     }
 

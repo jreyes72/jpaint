@@ -1,5 +1,6 @@
 package model.picture;
 
+import java.awt.Graphics;
 import model.ShapeColor;
 import model.interfaces.Shape;
 
@@ -19,7 +20,8 @@ public Rectangle(Point start, Point end, ShapeColor color) {
 }
 
   @Override
-  public void build() {
-
+  public void draw(Graphics graphics) {
+    graphics.setColor(color.color);
+    graphics.fillRect(start.getX(), start.getY(), width,height);
   }
 }

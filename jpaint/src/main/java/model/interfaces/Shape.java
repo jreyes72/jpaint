@@ -1,7 +1,9 @@
 package model.interfaces;
 
+import java.awt.Graphics;
+
 public interface Shape {
 
-  void build();
+  void draw(Graphics graphics);
 
 }

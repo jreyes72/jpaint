@@ -12,9 +12,11 @@ public class CreateShapeCommand implements Command, Undoable {
     private Point start;
     private Point end;
     private UserChoices userChoices;
+    private Picture picture;
 
-    public CreateShapeCommand(UserChoices userChoices, Point start, Point end) {
+    public CreateShapeCommand(UserChoices userChoices, Picture picture, Point start, Point end) {
         this.userChoices = userChoices;
+        this.picture = picture;
         this.start = start;
         this.end = end;
     }
@@ -23,8 +25,7 @@ public class CreateShapeCommand implements Command, Undoable {
     public void run() {
         Rectangle rect = new Rectangle(start,end,userChoices.getActivePrimaryColor());
         CommandHistory.add(this);
-        Picture p = new Picture();
-        p.add(rect);
+        picture.add(rect);
         System.out.println("running...");
     }
 

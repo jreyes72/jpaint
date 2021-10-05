@@ -2,6 +2,7 @@ package view.gui;
 
 import javax.swing.JComponent;
 import java.awt.*;
+import model.picture.Picture;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,11 +15,17 @@ public class PaintCanvas extends JComponent {
 
     // part of the example below.  Please removed when the example is removed
     private int paintCount = 0;
+    private Picture picture;
+
 
     private static final Logger log = LoggerFactory.getLogger(PaintCanvas.class);
 
     public Graphics2D getGraphics2D() {
         return (Graphics2D)getGraphics();
+    }
+
+    public void setPicture(Picture picture) {
+        this.picture = picture;
     }
 
     @Override
@@ -29,7 +36,7 @@ public class PaintCanvas extends JComponent {
      */
     public void paintComponent(Graphics graphics) {
 
-
+        picture.draw(graphics);
 
 
 //        Graphics2D graphics2d = (Graphics2D) graphics;

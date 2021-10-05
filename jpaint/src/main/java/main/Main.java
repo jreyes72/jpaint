@@ -12,6 +12,7 @@ import java.awt.Stroke;
 import controller.command.CommandController;
 import model.interfaces.UserChoices;
 import model.persistence.UserChoicesImpl;
+import model.picture.Picture;
 import view.gui.Gui;
 import view.gui.GuiWindowImpl;
 import view.gui.PaintCanvas;
@@ -29,7 +30,9 @@ public class Main {
         KeyboardInterface keys = new KeyboardInterface(paintCanvas, appState);
         keys.setup();
 
-        CommandController commandController = new CommandController(appState);
+        Picture picture = new Picture();
+        paintCanvas.setPicture(picture);
+        CommandController commandController = new CommandController(appState,picture,paintCanvas);
         MouseHandler mouse = new MouseHandler(commandController);
         paintCanvas.addMouseListener(mouse);
         controller.setup();
@@ -38,7 +41,8 @@ public class Main {
 
         Graphics2D graphics2d = paintCanvas.getGraphics2D();
 
-        // - Begin example: remove after you understand it
+        paintCanvas.paintComponent(graphics2d);
+       /* // - Begin example: remove after you understand it
 
         graphics2d.setColor(Color.GREEN);
         graphics2d.fillRect(12, 13, 200, 400);
@@ -54,6 +58,6 @@ public class Main {
         graphics2d.setColor(Color.BLACK);
         graphics2d.drawRect(7, 8, 210, 410);
 
-        // - End example
+        // - End example */
     }
 }

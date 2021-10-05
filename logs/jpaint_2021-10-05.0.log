@@ -6,3 +6,11 @@
 2021-10-05 11:09:06,502 27974 [AWT-EventQueue-0] DEBUG controller.MouseHandler - Start 125 99
 2021-10-05 11:09:34,701 56173 [AWT-EventQueue-0] DEBUG controller.MouseHandler - Start 375 96
 2021-10-05 11:40:20,708 3225 [AWT-EventQueue-0] DEBUG controller.MouseHandler - Start 3 3
+2021-10-05 13:20:45,210 2799 [AWT-EventQueue-0] DEBUG controller.MouseHandler - Start 96 67
+2021-10-05 13:20:48,065 5654 [AWT-EventQueue-0] DEBUG controller.MouseHandler - Start 32 21
+2021-10-05 13:20:49,236 6825 [AWT-EventQueue-0] DEBUG controller.MouseHandler - Start 159 142
+2021-10-05 13:20:50,286 7875 [AWT-EventQueue-0] DEBUG controller.MouseHandler - Start 360 150
+2021-10-05 13:22:49,139 16284 [AWT-EventQueue-0] DEBUG controller.MouseHandler - Start 72 102
+2021-10-05 13:22:50,196 17341 [AWT-EventQueue-0] DEBUG controller.MouseHandler - Start 107 72
+2021-10-05 13:22:51,530 18675 [AWT-EventQueue-0] DEBUG controller.MouseHandler - Start 66 43
+2021-10-05 13:24:29,331 2606 [AWT-EventQueue-0] DEBUG controller.MouseHandler - Start 80 60

@@ -5,11 +5,12 @@
  */
 package controller.command;
 
+import model.interfaces.Region;
 import model.interfaces.UserChoices;
 import model.picture.Point;
-import model.interfaces.Picture;
+import view.interfaces.Picture;
+import model.picture.RegionImpl;
 import view.gui.PaintCanvas;
-import controller.interfaces.Undoable;
 import controller.interfaces.Command;
 
 /**
@@ -28,9 +29,8 @@ public class CommandController {
   }
 
   public void onDraw(Point start, Point end) {
-
-    Command cmd = new CreateShapeCommand(choices, canvas, picture, start, end);
-
+    Region region = new RegionImpl(start, end);
+    Command cmd = CommandFactory.makeCommand(choices,canvas,picture,region);
     cmd.run();
 
     canvas.repaint();

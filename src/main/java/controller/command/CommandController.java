@@ -44,5 +44,12 @@ public class CommandController {
     CommandHistory.redo();
     canvas.repaint();
   }
+
+  public void onCopy() {
+
+  }
+  public void onPaste() {
+
+  }
 }
 

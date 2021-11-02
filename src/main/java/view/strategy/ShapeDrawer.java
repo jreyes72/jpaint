@@ -11,7 +11,11 @@ import view.interfaces.Shape;
 
 import view.interfaces.DrawStrategy;
 
-public class RectangleDrawer implements DrawStrategy {
+public class ShapeDrawer implements DrawStrategy {
+
+  public ShapeDrawer(DrawStrategy drawStrategy) {
+
+  }
 
   @Override
   public void draw(Graphics2D graphics, Shape shape) {

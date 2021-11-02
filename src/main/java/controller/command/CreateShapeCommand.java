@@ -9,6 +9,8 @@ import controller.ShapeBuilder;
 import controller.interfaces.Command;
 import controller.interfaces.Undoable;
 import java.awt.Color;
+
+import model.ShapeShadingType;
 import model.interfaces.Region;
 import view.interfaces.Shape;
 import model.interfaces.UserChoices;
@@ -52,8 +54,12 @@ public class CreateShapeCommand implements Command, Undoable {
   public void run() {
     ShapeBuilder builder = new ShapeBuilder();
     Color fillColor = userChoices.getActivePrimaryColor().value;
+    Color borderColor = userChoices.getActiveSecondaryColor().value;
+    ShapeShadingType shadingType = userChoices.getActiveShapeShadingType();
     builder
         .setFillColor(fillColor)
+        .setBorderColor(borderColor)
+        .setShadingType(shadingType)
         .setRegion(region)
         .setType(userChoices.getActiveShapeType());
 

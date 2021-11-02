@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="model.picture.RegionImplTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-11-02T16:51:35" hostname="Joels-MacBook-Pro.local" time="0.015">
+  <properties/>
+  <testcase name="A drag from upper right to lower left should swap end for start" classname="model.picture.RegionImplTest" time="0.001"/>
+  <testcase name="A drag from lower right to upper left should swap end for start" classname="model.picture.RegionImplTest" time="0.001"/>
+  <testcase name="A drag from upper left to lower right should leave start point unchanged" classname="model.picture.RegionImplTest" time="0.002"/>
+  <testcase name="A drag from upper right to lower left should swap end for start" classname="model.picture.RegionImplTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

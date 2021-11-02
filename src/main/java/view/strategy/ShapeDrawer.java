@@ -13,14 +13,16 @@ import view.interfaces.DrawStrategy;
 
 public class ShapeDrawer implements DrawStrategy {
 
-  public ShapeDrawer(DrawStrategy drawStrategy) {
+  private DrawStrategy drawStrategy;
 
+  public ShapeDrawer(DrawStrategy drawStrategy) {
+    this.drawStrategy = drawStrategy;
   }
 
   @Override
   public void draw(Graphics2D graphics, Shape shape) {
     Region region = shape.region();
     graphics.setColor(shape.fillColor());
-    graphics.fillRect(region.getX(), region.getY(), region.getWidth(), region.getHeight());
+    drawStrategy.draw(graphics,shape);
   }
 }

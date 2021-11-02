@@ -15,6 +15,7 @@ import model.interfaces.Region;
  */
 public interface Shape {
   void draw(Graphics2D graphics);
+  void drawSelected(Graphics2D graphics);
   Color fillColor();
   Color borderColor();
   Region region();

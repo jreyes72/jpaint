@@ -50,6 +50,11 @@ public class ShapeImpl implements Shape {
     borderStrategy.draw(graphics, this);
   }
 
+  @Override
+  public void drawSelected(Graphics2D graphics) {
+    selectStrategy.draw(graphics, this);
+  }
+
   public void move(int x, int y) {
     region.move(x, y);
   }

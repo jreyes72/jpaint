@@ -37,5 +37,11 @@ public class Clipboard {
     paster.run();
     return (Undoable) paster;
   }
+
+  public Undoable delete() {
+    Command deleter = CommandFactory.makeDeleteCommand(picture,canvas);
+    deleter.run();
+    return (Undoable) deleter;
+  }
 }
 

@@ -54,5 +54,10 @@ public class CommandController {
     clipboard.paste();
     canvas.repaint();
   }
+
+  public void onDelete() {
+    clipboard.delete();
+    canvas.repaint();
+  }
 }
 

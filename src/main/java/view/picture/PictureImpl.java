@@ -32,6 +32,12 @@ public class PictureImpl implements Picture {
   }
 
   @Override
+  public void remove(List<Shape> shapes){
+    elements.removeAll(shapes);
+    selected.removeAll(shapes);
+  }
+
+  @Override
   public void add(List<Shape> shapes) {
     elements.addAll(shapes);
   }

@@ -17,6 +17,7 @@ public interface Picture {
   void add(Shape shape);
   void add(List<Shape> shapes);
   void remove(Shape shape);
+  void remove(List<Shape> shapes);
   void draw(Graphics2D g);
   void select(Region region);
   List<Shape> getSelected();
